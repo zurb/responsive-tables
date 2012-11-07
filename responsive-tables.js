@@ -22,6 +22,7 @@ $(document).ready(function() {
 	
 	function splitTable(original)
 	{
+		original.wrap("<span class='pseudo-wrapper' />");
 		original.wrap("<div class='table-wrapper' />");
 		
 		var copy = original.clone();
@@ -37,6 +38,7 @@ $(document).ready(function() {
     original.closest(".table-wrapper").find(".pinned").remove();
     original.unwrap();
     original.unwrap();
+	original.unwrap();
 	}
 
 });
