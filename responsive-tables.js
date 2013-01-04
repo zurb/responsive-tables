@@ -31,6 +31,8 @@ $(document).ready(function() {
 		original.closest(".table-wrapper").append(copy);
 		copy.wrap("<div class='pinned' />");
 		original.wrap("<div class='scrollable' />");
+
+    setCellHeights(original, copy);
 	}
 	
 	function unsplitTable(original) {
@@ -38,5 +40,27 @@ $(document).ready(function() {
     original.unwrap();
     original.unwrap();
 	}
+
+  function setCellHeights(original, copy) {
+    var tr = original.find('tr'),
+        tr_copy = copy.find('tr'),
+        heights = [];
+
+    tr.each(function (index) {
+      var self = $(this),
+          tx = self.find('th, td');
+
+      tx.each(function () {
+        var height = $(this).outerHeight(true);
+        heights[index] = heights[index] || 0;
+        if (height > heights[index]) heights[index] = height;
+      });
+
+    });
+
+    tr_copy.each(function (index) {
+      $(this).height(heights[index]);
+    });
+  }
 
 });
