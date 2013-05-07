@@ -28,23 +28,11 @@ table td, table th { padding: 9px 10px; text-align: left; }
 	.pinned td:last-child { border-bottom: 0; }
 	
 	div.table-wrapper { position: relative; margin-bottom: 20px; overflow: hidden; border-right: 1px solid #ccc; }
-	div.table-wrapper div.scrollable table { margin-left: 35%; }
+	div.table-wrapper div.scrollable { margin-left: 35%; }
 	div.table-wrapper div.scrollable { overflow: scroll; overflow-y: hidden; }	
 	
 	table.responsive td, table.responsive th { position: relative; white-space: nowrap; overflow: hidden; }
 	table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td { display: none; }
 	
+	
 }
-
-/* -----------------------------------------
-   Page Name 1
------------------------------------------ */
-
-
-
-
-/* -----------------------------------------
-   Page Name 2
------------------------------------------ */
-
-
