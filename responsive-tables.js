@@ -43,25 +43,12 @@ $(document).ready(function() {
 	}
 
   function setCellHeights(original, copy) {
-    var tr = original.find('tr'),
-        tr_copy = copy.find('tr'),
-        heights = [];
-
-    tr.each(function (index) {
-      var self = $(this),
-          tx = self.find('th, td');
-
-      tx.each(function () {
-        var height = $(this).height;
-        heights[index] = heights[index] || 0;
-        if (height > heights[index]) heights[index] = height;
-        $(this).css('height', heights[index]+'px');
-      });
-
-    });
-
-    tr_copy.each(function (index) {
-      $(this).css('height', heights[index]+'px');
+    $('tr', original).each(function(index){
+      oheight = $(this).height();
+      cheight = $('tr:eq('+index+')', copy).height();
+      height = (oheight > cheight ? oheight : cheight);
+      $('th,td', original).css('height', height+'px');
+      $('th,td', copy).css('height', height+'px');
     });
   }
 
