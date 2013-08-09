@@ -55,12 +55,13 @@ $(document).ready(function() {
         var height = $(this).outerHeight(true);
         heights[index] = heights[index] || 0;
         if (height > heights[index]) heights[index] = height;
+        $(this).css('height', heights[index]+'px');
       });
 
     });
 
     tr_copy.each(function (index) {
-      $(this).height(heights[index]);
+      $(this).css('height', heights[index]+'px');
     });
   }
 
