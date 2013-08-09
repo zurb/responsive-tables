@@ -34,6 +34,7 @@ $(document).ready(function() {
 		original.wrap("<div class='scrollable' />");
 
     setCellHeights(original, copy);
+    setTableHeights(original, copy);
 	}
 	
 	function unsplitTable(original) {
@@ -50,6 +51,14 @@ $(document).ready(function() {
       $('th,td', original).css('height', height+'px');
       $('th,td', copy).css('height', height+'px');
     });
+  }
+
+  function setTableHeights(original, copy) {
+      oheight = original.outerHeight();
+      cheight = copy.outerHeight();
+      height = (oheight > cheight ? oheight : cheight);
+      original.css('min-height', height+'px');
+      copy.css('min-height', height+'px');
   }
 
 });
