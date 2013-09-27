@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var connect = require('connect'),
+    path = require('path'),
+    http = require('http'),
+    DEFAULT_PORT = 8080;
+
+var app = connect()
+  .use(connect.logger('dev'))
+  .use(connect.static(path.join(__dirname, '..')));
+
+http.createServer(app).listen(DEFAULT_PORT);
+console.info('Server started at http://localhost:' + DEFAULT_PORT + '/')
