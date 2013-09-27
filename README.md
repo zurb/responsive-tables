@@ -8,17 +8,3 @@ bin/setup
 ```
 
 To see this in action just run `bin/server` and go to http://localhost:8080
-
-## TODO
-
-#### directives
-
-  * Orbit
-  * Abide
-  * Clearing
-  * Dropdown
-  * Dropdown Buttons
-  * Joyride
-  * Magellan
-  * Section
-  * Tooltips
