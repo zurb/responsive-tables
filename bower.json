@@ -1,0 +1,7 @@
+{
+  "name": "responsive-tables",
+  "version": "0.0.1",
+  "dependencies": {
+    "foundation": "git://github.com/mhayes/foundation.git#v4.3.2"
+  }
+}
