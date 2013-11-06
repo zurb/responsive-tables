@@ -1,14 +1,20 @@
 $(document).ready(function() {
   var switched = false;
   var updateTables = function() {
-    if (($(window).width() < 767) && !switched ){
+    var mediaQueryWidth = 767;
+    var scrollBarWidth = 0;
+
+    if ($.browser.mozilla)
+      scrollBarWidth = window.innerWidth - jQuery("body").width();
+
+    if (($(window).width() < mediaQueryWidth - scrollBarWidth) && !switched ){
       switched = true;
       $("table.responsive").each(function(i, element) {
         splitTable($(element));
       });
       return true;
     }
-    else if (switched && ($(window).width() > 767)) {
+    else if (switched && ($(window).width() > mediaQueryWidth - scrollBarWidth)) {
       switched = false;
       $("table.responsive").each(function(i, element) {
         unsplitTable($(element));
