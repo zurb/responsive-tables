@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function($) {
   var switched = false;
   var updateTables = function() {
     if (($(window).width() < 767) && !switched ){
@@ -16,9 +16,9 @@ $(document).ready(function() {
     }
   };
    
-  $(window).load(updateTables);
-  $(window).on("redraw",function(){switched=false;updateTables();}); // An event to listen for
-  $(window).on("resize", updateTables);
+  jQuery(window).load(updateTables);
+  jQuery(window).on("redraw",function(){switched=false;updateTables();}); // An event to listen for
+  jQuery(window).on("resize", updateTables);
    
 	
 	function splitTable(original)
