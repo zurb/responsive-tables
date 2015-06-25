@@ -55,7 +55,9 @@
           splitTable($(element));
         });
         return true;
-      } else if (switched && ($window.width() > 767)) {
+      }
+
+      if (switched && $window.width() > 767) {
         switched = false;
         $responsiveTable.each(function (i, element) {
           unsplitTable($(element));
@@ -64,6 +66,7 @@
     }
 
     $window.on('load', updateTables);
+    // @todo Debounce this.
     $window.on('resize', updateTables);
     $window.on('redraw', function () {
       switched = false;
