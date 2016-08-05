@@ -1,0 +1,15 @@
+{
+	"name": "zurb-responsive-tables",
+	"description": "Responsive Tables for Foundation made by ZURB.",
+	"homepage": "http://zurb.com/playground/responsive-tables",
+	"authors": [
+    "ZURB <foundation@zurb.com>"
+  ],
+  "license": "MIT",
+	"keywords": [
+		"zurb",
+		"foundation",
+		"table",
+		"responsive"
+	]
+}
