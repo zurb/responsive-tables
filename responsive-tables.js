@@ -16,7 +16,7 @@ $(document).ready(function() {
     }
   };
    
-  $(window).load(updateTables);
+  updateTables();
   $(window).on("redraw",function(){switched=false;updateTables();}); // An event to listen for
   $(window).on("resize", updateTables);
    
